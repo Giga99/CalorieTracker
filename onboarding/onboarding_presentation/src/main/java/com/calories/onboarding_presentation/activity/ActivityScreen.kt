@@ -13,7 +13,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.calories.core.R
 import com.calories.core.domain.model.ActivityLevel
-import com.calories.core.domain.model.Gender
 import com.calories.core.util.UiEvent
 import com.calories.core_ui.LocalSpacing
 import com.calories.onboarding_presentation.components.ActionButton

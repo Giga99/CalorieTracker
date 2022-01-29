@@ -23,7 +23,7 @@ class DefaultPreferences(
     }
 
     override fun saveHeight(height: Int) {
-        sharedPref.edit().putInt(Preferences.KEY_GENDER, height).apply()
+        sharedPref.edit().putInt(Preferences.KEY_HEIGHT, height).apply()
     }
 
     override fun saveActivityLevel(level: ActivityLevel) {

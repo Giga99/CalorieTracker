@@ -7,7 +7,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.calories.core.domain.preferences.Preferences
 import com.calories.core.domain.usecase.FilterOutDigits
-import com.calories.core.navigation.Route
 import com.calories.core.util.UiEvent
 import com.calories.core.util.UiText
 import com.calories.onboarding_presentation.R
@@ -44,7 +43,7 @@ class HeightViewModel @Inject constructor(
                 return@launch
             }
             preferences.saveHeight(heightNumber)
-            _uiEvent.send(UiEvent.Navigate(Route.WEIGHT))
+            _uiEvent.send(UiEvent.Success)
         }
     }
 }

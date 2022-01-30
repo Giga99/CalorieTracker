@@ -6,7 +6,6 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.calories.core.domain.preferences.Preferences
-import com.calories.core.navigation.Route
 import com.calories.core.util.UiEvent
 import com.calories.core.util.UiText
 import com.calories.onboarding_presentation.R
@@ -28,7 +27,7 @@ class WeightViewModel @Inject constructor(
     val uiEvent = _uiEvent.receiveAsFlow()
 
     fun onWeightEnter(weight: String) {
-        if(weight.length <= 5) {
+        if (weight.length <= 5) {
             this.weight = weight
         }
     }
@@ -42,7 +41,7 @@ class WeightViewModel @Inject constructor(
                 return@launch
             }
             preferences.saveWeight(weightNumber)
-            _uiEvent.send(UiEvent.Navigate(Route.ACTIVITY))
+            _uiEvent.send(UiEvent.Success)
         }
     }
 }
